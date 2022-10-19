@@ -3,7 +3,7 @@ num_lives=6
 word_list=("abruptly", "absurd", "abyss", "affix", "asked", "avenue", "awkward", "axiom", "azure", "bagpipes", "bandwagon", "banjo", "bayou", "beekeeper", "bikini", "blitz", "blizzard", "boggle", "bookworm", "boxcar", "boxful", "buckaroo", "buffalo", "buffoon", "buxom", "buzzard")
 word=random.choice(word_list)
 word_letters=list(word)
-# print(word_letters) ##uncomment if you wanna cheat##
+print(word_letters) ##uncomment if you wanna cheat##
 letters_found=[]
 print("Hello we are playing a game of hang man I'm thinking of a word and you gotta pick it")
 while num_lives != 0:
@@ -23,4 +23,4 @@ while num_lives != 0:
     print(f"You have {num_lives} lives")
 if num_lives == 0:
   print("You Lose")
-  print(f"you found these letters: {letters_found}")
+  print(f"you found these letters: {letters_found}, the word was {word}")
