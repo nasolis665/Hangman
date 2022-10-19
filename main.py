@@ -5,12 +5,17 @@ word=random.choice(word_list)
 word_letters=list(word)
 print(word_letters) ##uncomment if you wanna cheat##
 letters_found=[]
+disp_let=[]
 print("Hello we are playing a game of hang man I'm thinking of a word and you gotta pick it")
 while num_lives != 0:
   letter=input("what letter do you want to guess?")
   letter=letter.lower()
-  if letter in word_letters:
+  elif letter in word_letters:
     print("You got a letter!")
+    index=word_letters.index(letter)
+    disp_let += word_letters[index]
+    print(f"You have these letter's found: {disp_let}")     
+    print("letter's wont be in order")
     letters_found.append(letter)
     word_letters.remove(letter)
     length=len(word_letters)
